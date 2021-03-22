@@ -40,7 +40,10 @@ overwhelming the central system. The bandwidth of the network would also be a ve
 could overcome these problems through parallel training. But providing so much video feed to a central server either owned by 
 or working with police departments would present serious ethical and legal concerns. In order for a police officer to investigate, 
 they require "Reasonable Suspicion," as defined by the US Supreme Court in *Terry v. Ohio* to be be based on "specific and 
-articulable facts" and "taken together with rational inferences from those facts."
+articulable facts" and "taken together with rational inferences from those facts." This proposal assumes that the identification 
+of a positive by an AI would meet the definition of Reasonable Suspicion because it is based on a trained analysis of objective 
+facts, specifically the video feed. Such a definition would eliminate many legal concerns regarding concentration of video feeds 
+by a police department or contractor.
 
 Split learning may be a solution to both problems. In split learning, the central computer (or server) would train only on the 
 higher level features while resources local to the camera (or client) would train on the lower level features. See "Split learning 
@@ -53,3 +56,10 @@ computing power for the central server. The high level features are a small port
 (both true and false) are only 1-2% of the overall frames. In addition, if human review detects violent activity that is not detected 
 by the AI, the higher level features from this false negative could be sent to the central computer for training.
 
+[SplitLearning.jpb]
+
+With the ability to train, this approach can become increasingly accurate. As the accuracy increases, there will be less false positives 
+so less data will be sent to central computer. This decreases preserves the privacy of more people and reduces bandwidth needs. 
+The higher level features already preserve privacy to a great degree. By consolidating the most valuable data in a legal and ethical 
+manner, it can decrease the need for police patrols and other approaches that are unlikely to catch violent acts while placing officers 
+in danger. Ultimately, this approach may make policework safer for both police and civilians.
