@@ -26,19 +26,30 @@ https://www.researchgate.net/publication/342428683_Multi-frame_feature-fusion-ba
 https://ieeexplore.ieee.org/document/8852616/
 
 <img src="https://www.researchgate.net/publication/342428683/figure/fig5/Visualization-of-low-level-and-high-level-feature-map-from-different-layers-of-CNN-model_W640.jpg"/>
-This graphic shows the different levels of the CNN in Asad, et al. Note the increased abstraction in each level.
+This graphic shows the different levels of the CNN in Asad, et al. Note the increased abstraction for features as each level
+becomes higher and higher.
 
 This proposal is concerned with fine-tuning these models to reach the necessary accuracy for usefulness. A camera running 
 continuously captures approximately 500,000 minutes every year, so if 1 minute shows violent imagery, a 99% accurate AI would 
 report 5,000 false positives and one true positive. Thus, an AI would need to use these networks to further train until 
 achieving at least 99.999% accuracy in order to be useful.
 
-One technique would be to send all video feeds to a central server for training. But this technique would be neither feasible
-nor ethical (and possibly not even legal). It would require immense computing resources to train on so much data, likely
+One technique would be to send all video feeds to a central server for training. But this technique would be neither feasible 
+nor ethical (and possibly not even legal). It would require immense computing resources to train on so much data, likely 
 overwhelming the central system. The bandwidth of the network would also be a very significant bottleneck. In theory, one 
-could overcome these problems through parallel training. But providing so much video feed to a central server either owned by
-or working with police departments would present serious ethical and legal concerns. In order for a police officer to investigate,
+could overcome these problems through parallel training. But providing so much video feed to a central server either owned by 
+or working with police departments would present serious ethical and legal concerns. In order for a police officer to investigate, 
 they require "Reasonable Suspicion," as defined by the US Supreme Court in *Terry v. Ohio* to be be based on "specific and 
 articulable facts" and "taken together with rational inferences from those facts."
 
-Split learning may be a solution to both problems. 
+Split learning may be a solution to both problems. In split learning, the central computer (or server) would train only on the 
+higher level features while resources local to the camera (or client) would train on the lower level features. See "Split learning 
+for health: Distributed deep learning without sharing raw patient data" (by Praneeth Vepakomma, Otkrist Gupta, Tristan Swedish and 
+Ramesh Raskar) for more information. https://arxiv.org/pdf/1812.00564.pdf This approach  still requires significant computing 
+resources for the central server, and some computing resources local to each camera. To further increase privacy and preserve 
+resources, the client will only send the high level features if the  camera detects a positive. This technique preserves privacy 
+because identifying features such as person's face and clothes remain with the camera operator. It also preserves bandwidth and 
+computing power for the central server. The high level features are a small portion of the overall weights, and the positives 
+(both true and false) are only 1-2% of the overall frames. In addition, if human review detects violent activity that is not detected 
+by the AI, the higher level features from this false negative could be sent to the central computer for training.
+
