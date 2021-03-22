@@ -26,8 +26,8 @@ https://www.researchgate.net/publication/342428683_Multi-frame_feature-fusion-ba
 https://ieeexplore.ieee.org/document/8852616/
 
 ![Visualization of feature maps]
-https://www.researchgate.net/publication/342428683/figure/fig5/AS:960089993252902@1605914700985/Visualization-of-low-level-and-high-level-feature-map-from-different-layers-of-CNN-model_W640.jpg
-This graphic shows the different levels of the CNN in Asad, et al. 
+(https://www.researchgate.net/publication/342428683/figure/fig5/AS:960089993252902@1605914700985/Visualization-of-low-level-and-high-level-feature-map-from-different-layers-of-CNN-model_W640.jpg)
+This graphic shows the different levels of the CNN in Asad, et al. Note the increased abstraction in each level.
 
 This proposal is concerned with fine-tuning these models to reach the necessary accuracy for usefulness. A camera running 
 continuously captures approximately 500,000 minutes every year, so if 1 minute shows violent imagery, a 99% accurate AI would 
