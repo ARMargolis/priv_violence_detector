@@ -56,7 +56,7 @@ computing power for the central server. The high level features are a small port
 (both true and false) are only 1-2% of the overall frames. In addition, if human review detects violent activity that is not detected 
 by the AI, the higher level features from this false negative could be sent to the central computer for training.
 
-[SplitLearning.jpb]
+![SplitLearning.jpg]
 
 With the ability to train, this approach can become increasingly accurate. As the accuracy increases, there will be less false positives 
 so less data will be sent to central computer. This decreases preserves the privacy of more people and reduces bandwidth needs. 
