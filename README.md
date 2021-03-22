@@ -1,6 +1,9 @@
 # priv_violence_detector
 **Privacy-preserving Detection of Violence in Cameras**
+
+
 By Aaron Margolis
+
 Views are mine alone (not current or former employer)
 
 This proposal presents a technique for detection of violence in camera footage that preserves privacy of camera subjects
@@ -26,3 +29,13 @@ This proposal is concerned with fine-tuning these models to reach the necessary 
 continuously captures approximately 500,000 minutes every year, so if 1 minute shows violent imagery, a 99% accurate AI would 
 report 5,000 false positives and one true positive. Thus, an AI would need to use these networks to further train until 
 achieving at least 99.999% accuracy in order to be useful.
+
+One technique would be to send all video feeds to a central server for training. But this technique would be neither feasible
+nor ethical (and possibly not even legal). It would require immense computing resources to train on so much data, likely
+overwhelming the central system. The bandwidth of the network would also be a very significant bottleneck. In theory, one 
+could overcome these problems through parallel training. But providing so much video feed to a central server either owned by
+or working with police departments would present serious ethical and legal concerns. In order for a police officer to investigate,
+they require "Reasonable Suspicion," as defined by the US Supreme Court in *Terry v. Ohio* to be be based on "specific and 
+articulable facts" and "taken together with rational inferences from those facts."
+
+Split learning may be a solution to both problems. 
